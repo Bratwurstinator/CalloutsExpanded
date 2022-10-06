@@ -8,6 +8,9 @@ using Verse;
 using HarmonyLib;
 using CM_Callouts;
 using Verse.Grammar;
+using CM_Callouts.PendingCallouts;
+using Verse.AI;
+using Verse.Grammar;
 
 namespace CalloutsExpanded
 {
@@ -47,6 +50,26 @@ namespace CalloutsExpanded
 		public bool aboveLevel;
 		public string name;
 		public string value;
+	}
+
+	public class PendingCalloutEventTradeInteraction : PendingCalloutEventDoublePawn
+	{
+		public PendingCalloutEventTradeInteraction(Pawn _initiator, Pawn _recipient, RulePackDef _initiatorRulePack, RulePackDef _recipientRulePack) : base(CalloutCategory.Undefined, _initiator, _recipient, _initiatorRulePack, _recipientRulePack)
+		{
+		}
+		protected override GrammarRequest PrepareGrammarRequest(RulePackDef rulePack)
+		{
+			GrammarRequest result = base.PrepareGrammarRequest(rulePack);
+			result.Constants.Add("RECIPIENT_TraderKindDef", recipient.TraderKind.defName);
+			return result;
+		}
+	}
+	
+	[DefOf]
+	public static class CalloutsExpandedDefOf
+    {
+		public static RulePackDef CM_Callouts_RulePack_Trade_Initiated;
+		public static RulePackDef CM_Callouts_RulePack_Trade_Received;
 	}
 
 	[StaticConstructorOnStartup]
@@ -129,4 +152,35 @@ namespace CalloutsExpanded
 		}
 	}
 
+	[HarmonyPatch(typeof(JobDriver_TradeWithPawn), "MakeNewToils")]
+	public static class TradeWithPawn_CalloutsExpanded_Patch
+    {
+		public static IEnumerable<Toil> Postfix(IEnumerable<Toil> values, JobDriver_TradeWithPawn __instance)
+        {
+			List<Toil> toils = values.ToList();
+			int i;
+			for(i = 0; i < toils.Count; i++)
+            {
+				if(i == toils.Count-1)
+                {
+					Toil toil = toils[i];
+					Action action = toil.initAction;
+					toil.initAction = delegate () 
+					{
+						action();
+						if(toil.actor == null || __instance.Trader == null)
+                        {
+							return;
+                        }
+						new PendingCalloutEventTradeInteraction(toil.actor, __instance.Trader, //set the Trader property to public with an assembly editor
+							CalloutsExpandedDefOf.CM_Callouts_RulePack_Trade_Initiated,
+							CalloutsExpandedDefOf.CM_Callouts_RulePack_Trade_Received).AttemptCallout();
+					};
+					yield return toils[i];
+					continue;
+                }
+				yield return toils[i];
+            }
+        }
+    }
 }
