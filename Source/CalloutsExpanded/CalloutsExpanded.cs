@@ -114,10 +114,14 @@ namespace CalloutsExpanded
 			{
 				foreach (CalloutConstantByNeedDef calloutConstantByNeedDef in DefDatabase<CalloutConstantByNeedDef>.AllDefs)
 				{
-					bool above = pawn.needs.TryGetNeed(calloutConstantByNeedDef.needDef)?.CurLevel > calloutConstantByNeedDef.needLevel;
-					if (calloutConstantByNeedDef.aboveLevel ? above : !above)
+					Need need = pawn.needs.TryGetNeed(calloutConstantByNeedDef.needDef);
+					if (need != null) 
 					{
-						grammarRequest.Constants[calloutConstantByNeedDef.name] = calloutConstantByNeedDef.value;
+						bool above = need.CurLevel > calloutConstantByNeedDef.needLevel;
+						if (calloutConstantByNeedDef.aboveLevel ? above : !above)
+						{
+							grammarRequest.Constants[calloutConstantByNeedDef.name] = calloutConstantByNeedDef.value;
+						}
 					}
 				}
 			}
