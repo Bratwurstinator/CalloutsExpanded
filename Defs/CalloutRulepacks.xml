@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<RulePackDef>
-		<defName>CM_Callouts_RulePack_Trade_Initiated</defName>
+		<defName>CalloutsExpanded_RulePack_Trade_Initiated</defName>
 		<include>
 			<li>CM_Callouts_Common</li>
 		</include>
@@ -26,7 +26,7 @@
 	</RulePackDef>
 	
 	<RulePackDef>
-		<defName>CM_Callouts_RulePack_Trade_Received</defName>
+		<defName>CalloutsExpanded_RulePack_Trade_Received</defName>
 		<include>
 			<li>CM_Callouts_Common</li>
 		</include>

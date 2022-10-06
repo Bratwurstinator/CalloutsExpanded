@@ -10,7 +10,6 @@ using CM_Callouts;
 using Verse.Grammar;
 using CM_Callouts.PendingCallouts;
 using Verse.AI;
-using Verse.Grammar;
 
 namespace CalloutsExpanded
 {
@@ -68,8 +67,8 @@ namespace CalloutsExpanded
 	[DefOf]
 	public static class CalloutsExpandedDefOf
     {
-		public static RulePackDef CM_Callouts_RulePack_Trade_Initiated;
-		public static RulePackDef CM_Callouts_RulePack_Trade_Received;
+		public static RulePackDef CalloutsExpanded_RulePack_Trade_Initiated;
+		public static RulePackDef CalloutsExpanded_RulePack_Trade_Received;
 	}
 
 	[StaticConstructorOnStartup]
@@ -173,8 +172,8 @@ namespace CalloutsExpanded
 							return;
                         }
 						new PendingCalloutEventTradeInteraction(toil.actor, __instance.Trader, //set the Trader property to public with an assembly editor
-							CalloutsExpandedDefOf.CM_Callouts_RulePack_Trade_Initiated,
-							CalloutsExpandedDefOf.CM_Callouts_RulePack_Trade_Received).AttemptCallout();
+							CalloutsExpandedDefOf.CalloutsExpanded_RulePack_Trade_Initiated,
+							CalloutsExpandedDefOf.CalloutsExpanded_RulePack_Trade_Received).AttemptCallout();
 					};
 					yield return toils[i];
 					continue;
