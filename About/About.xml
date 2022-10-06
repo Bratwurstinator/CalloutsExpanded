@@ -6,7 +6,7 @@
 	<supportedVersions>
     <li>1.3</li>
 	</supportedVersions>
-	<description>Adds the option to make callouts based on ThingDefs, PawnkindDefs, Hediffs, Hediff Stages, Need levels, and Trading.</description>
+	<description>Adds the option to make callouts based on ThingDefs, PawnkindDefs, Hediffs, Hediff Stages, Need-levels, and Trading.</description>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
