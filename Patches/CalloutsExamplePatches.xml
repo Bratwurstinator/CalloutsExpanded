@@ -3,26 +3,26 @@
 	<Operation Class="PatchOperationAdd">
 	  <xpath>Defs/RulePackDef[defName="CM_Callouts_RulePack_Attack_Common"]/rulePack/rulesStrings</xpath>
 	  <value>
-		<li>rule(PIRATE==true,p=100)->OOH THEY'LL HAVE TO GLUE YOU BACK TOGETHER! IN HELL!</li>
+		<li>rule(PIRATE==true)->OOH THEY'LL HAVE TO GLUE YOU BACK TOGETHER! IN HELL!</li>
 		<li>rule(PIRATE==true)->Arr, i'll get your booty!</li>
 		<li>rule(COUGAR==true)->MEOW!</li>
 		<li>rule(COUGAR==true)->MROW!</li>
-		<li>rule(COUGAR==true,p=100)->GOUGAR :DDDDD</li>
+		<li>rule(COUGAR==true)->GOUGAR :DDDDD</li>
 	  </value>
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
 	  <xpath>Defs/RulePackDef[defName="CM_Callouts_RulePack_Melee_Attack"]/rulePack/rulesStrings</xpath>
 	  <value>
-		<li>rule(SCARIA==true,p=100)->FLESH, FLESH, FREE FLEEEEESH</li>
+		<li>rule(SCARIA==true)->FLESH, FLESH, FREE FLEEEEESH</li>
 	  </value>
 	</Operation>
 	
 	<Operation Class="PatchOperationAdd">
 	  <xpath>Defs/RulePackDef[defName="CM_Callouts_RulePack_Drafted"]/rulePack/rulesStrings</xpath>
 	  <value>
-		<li>rule(EXTREMEINFECTION==true,p=100)->You really expect me to put up a fight?</li>
-		<li>rule(UNHAPPY==true,p=100)->Ooh, i need a pint.</li>
+		<li>rule(EXTREMEINFECTION==true)->You really expect me to put up a fight?</li>
+		<li>rule(UNHAPPY==true)->Ooh, i need a pint.</li>
 	  </value>
 	</Operation>
 </Patch>
