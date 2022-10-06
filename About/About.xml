@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>CalloutsExpanded</name>
+	<author>Bratwurstinator</author>
+	<packageId>brat.calloutByPawnkind</packageId>
+	<supportedVersions>
+    <li>1.3</li>
+	</supportedVersions>
+	<description>Adds the option to make callouts based on ThingDefs, PawnkindDefs, Hediffs, Hediff Stages and Need levels.</description>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>CaptainMuscles.Callouts</packageId>
+			<displayName>Callouts</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2362736503</steamWorkshopUrl>
+			<downloadUrl>https://github.com/CaptainMuscles/CM_Callouts/releases</downloadUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>brrainz.harmony</li>
+		<li>CaptainMuscles.Callouts</li>
+	</loadAfter>
+</ModMetaData>
