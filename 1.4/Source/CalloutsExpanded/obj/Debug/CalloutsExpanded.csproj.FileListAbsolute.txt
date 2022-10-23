@@ -1,0 +1,9 @@
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\CalloutsExpanded\Assemblies\CalloutsExpanded.dll
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\CalloutsExpanded\Source\CalloutsExpanded\obj\Debug\CalloutsExpanded.csprojAssemblyReference.cache
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\CalloutsExpanded\Source\CalloutsExpanded\obj\Debug\CalloutsExpanded.csproj.CoreCompileInputs.cache
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\CalloutsExpanded\Source\CalloutsExpanded\obj\Debug\CalloutsExpanded.dll
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\CalloutsExpanded\1.4\Source\CalloutsExpanded\obj\Debug\CalloutsExpanded.csprojAssemblyReference.cache
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\CalloutsExpanded\1.4\Source\CalloutsExpanded\obj\Debug\CalloutsExpanded.csproj.CoreCompileInputs.cache
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\CalloutsExpanded\1.4\Source\CalloutsExpanded\obj\Debug\CalloutsExpanded.dll
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\CalloutsExpanded\1.4\Assemblies\CalloutsExpanded.dll
+C:\SteamLibrary\steamapps\common\RimWorld\Mods\CalloutsExpanded\1.4\Source\CalloutsExpanded\obj\Debug\CalloutsExpanded.csproj.CopyComplete
